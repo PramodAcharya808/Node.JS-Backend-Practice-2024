@@ -11,6 +11,17 @@ app.use(
   })
 );
 
+// ROUTER SETUP
+import router from "./routes/user.route.js";
+
+const apiVersion = process.env.API_VERSION;
+
+app.use(`${apiVersion}/user`, router);
+
+app.get(`${apiVersion}/test`, (req, res) => {
+  res.send("HELLO WORLD");
+});
+
 app.use(cookieParser());
 
 app.use(express.json({ limit: "16kb" }));

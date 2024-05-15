@@ -10,3 +10,5 @@ const registerUser = (req, res) => {
     console.log(err.message);
   }
 };
+
+export { registerUser };
