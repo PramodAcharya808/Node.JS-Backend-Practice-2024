@@ -31,7 +31,6 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Password is required"],
       minlength: 6,
-      maxlength: 12,
     },
     watchHistory: [
       {
