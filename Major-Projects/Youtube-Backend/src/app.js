@@ -16,9 +16,9 @@ import router from "./routes/user.route.js";
 
 const apiVersion = process.env.API_VERSION;
 
-app.use(`${apiVersion}/user`, router);
+app.use(`/api/v1/user`, router);
 
-app.get(`${apiVersion}/test`, (req, res) => {
+app.get(`/api/v1/test`, (req, res) => {
   res.send("HELLO WORLD");
 });
 
