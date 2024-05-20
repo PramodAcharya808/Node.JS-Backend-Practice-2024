@@ -1,6 +1,6 @@
-import { User } from "../models/user.model";
-import { ApiError } from "../utils/ErrorHandler";
-import { jwt } from "jsonwebtoken";
+import { User } from "../models/user.model.js";
+import { ApiError } from "../utils/ErrorHandler.js";
+import jwt from "jsonwebtoken";
 
 export const JWTverify = async (req, res, next) => {
   const token =
