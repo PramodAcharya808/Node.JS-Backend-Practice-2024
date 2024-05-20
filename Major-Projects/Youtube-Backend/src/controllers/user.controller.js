@@ -231,6 +231,7 @@ const logoutUser = async (req, res) => {
     return res
       .status(200)
       .clearCookie("access_token", options)
+      .clearCookie("refresh_token", options)
       .json(new ApiResoponse(200, "User Logged out successfully"));
   } catch (error) {
     throw new ApiError(500, "Something went wrong");
