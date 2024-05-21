@@ -226,4 +226,12 @@ const refreshAccessToken = async (req, res) => {
   }
 };
 
+const changeCurrentPassword = async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+  } catch (error) {
+    throw new ApiError(500, "Something went wrong");
+  }
+};
+
 export { registerUser, loginUser, logoutUser, refreshAccessToken };
