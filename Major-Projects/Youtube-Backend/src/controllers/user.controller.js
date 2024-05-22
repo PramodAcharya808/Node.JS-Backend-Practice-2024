@@ -341,6 +341,26 @@ const updateCoverImage = async (req, res) => {
   }
 };
 
+const getUserChannelProfile = async (req, res) => {
+  try {
+    const { username } = req.params;
+    if (!username) {
+      throw new ApiError(400, "Username is required");
+    }
+
+    // create an aggregate channel profile using subscription models
+    const channel = User.aggregate([
+      // filter out the user accounts for one which we are searching for
+    ]);
+  } catch (error) {
+    throw new ApiError(
+      500,
+      "Something went wrong while getting the channel information",
+      error
+    );
+  }
+};
+
 export {
   registerUser,
   loginUser,
