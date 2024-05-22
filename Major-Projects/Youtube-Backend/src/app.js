@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 // ROUTER SETUP
 import router from "./routes/user.route.js";
 
-const apiVersion = process.env.API_VER;
+const apiVersion = "/api/v1";
 
 app.use(`${apiVersion}/user`, router);
 
